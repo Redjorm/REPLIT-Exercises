@@ -48,13 +48,13 @@ const users = [
 ]
 
 function countApplicationsByChannel (students) {
-  let channel = {}
-  for (const i in students) {
-    if (students[i].application) {
-        if (channel[students[i].channel]) {
-            channel[students[i].channel] = channel[students[i].channel] + 1
-        }else{
-            channel[students[i].channel] = 1
+  let channel = {} //Creo un objeto vacio
+  for (const i in students) {  //Recorro nuestro arreglo principal
+    if (students[i].application) { // Verifico que channel no venga null
+        if (channel[students[i].channel]) { // Este if verifica que en el objeto este creado la key, por ejemplo "youtube".
+            channel[students[i].channel] = channel[students[i].channel] + 1  //Si esta creado hara un +1 al dato del key, sino ira al else
+        }else{ //Else aqui se crean las keys
+            channel[students[i].channel] = 1 //Aqui estoy creando un key en el objeto y la inicializo en 1 porque existe.
         }
     }
   }

@@ -10,7 +10,7 @@ Si tu función recibe 20 y 30 deberías retornar 100, ya que los números pares 
 *Recuerda utilizar return para devolver tu solución.
 *El segundo número recibido siempre será mayor al primero. */
 
-function sumEvens (start, end) {
+/* function sumEvens (start, end) {
   let suma = 0
   for (let i = start + 1; i < end; i++) {
     if (i % 2 == 0) {
@@ -18,6 +18,17 @@ function sumEvens (start, end) {
     }
   }
   return suma
+} */
+
+
+
+function sumEvens (start, end) {
+  let suma = 0
+  for (let x = start + 2; x < end; x++) {
+    console.log(x);
+  }
+  return suma
 }
+
 
 console.log(sumEvens(20, 30))
