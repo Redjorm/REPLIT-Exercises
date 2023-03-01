@@ -34,13 +34,16 @@ let animals = [
 ]
 
 function arrayToObject (animals) {
-  let newarray = {}
-  let hola = animals.sort(function (a, b) {
-    if (a === b) {
-      return 'HO'
+  let object = {}
+  for (let i = 0; i < animals.length; i++) {
+    if (object[animals[i].slice(0, 1)]) {
+      object[animals[i].slice(0, 1)].push(animals[i])
+    } else {
+      object[animals[i].slice(0, 1)] = [animals[i]]
     }
-  })
-  return hola
+  }
+  return object
 }
 
 console.log(arrayToObject(animals))
+//console.log(animals[i].slice(0, 1))
